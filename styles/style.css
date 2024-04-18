@@ -4,6 +4,7 @@
   font-family: var(--font-family);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--background-color);
+  background-attachment: fixed;
 }
 
 .title-decor {
