@@ -5,10 +5,13 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--background-color);
   background-attachment: fixed;
+  background-image: var(--cover-img);
+  background-position: bottom;
+  background-size: cover;
 }
 
 .title-decor {
-  color: var(--background-color);
+  color: var(--decor-text-color);
   font-size: var(--font-size-text);
   line-height: 130%;
   background-color: var(--accent-color);
@@ -31,11 +34,11 @@
   line-height: 1;
 }
 
-.bordered {
+.decorated-zone {
   position: relative;
 }
 
-.bordered::before {
+.decorated-zone::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -43,11 +46,11 @@
   display: block;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
-.bordered::after {
+.decorated-zone::after {
   content: '';
   position: absolute;
   bottom: 20px;
@@ -55,14 +58,8 @@
   display: block;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-}
-
-.decorated-zone {
-  background-image: var(--header-cover-img);
-  background-position: bottom;
-  background-size: cover;
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 
 .header {
@@ -86,26 +83,28 @@
   width: 70px;
   height: 26px;
   border: none;
-  color: var(--accent-color);
+  color: var(--contrast-title-color);
   font-weight: 400;
   font-size: var(--font-size-text);
   line-height: 100%;
   text-transform: lowercase;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--border-color);
 }
 
-.header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color);
+.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
+  border: 1px solid var(--border-hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
   outline: none;
 }
+
 .header__title {
   align-self: start;
   margin-left: -20px;
@@ -132,6 +131,7 @@
   align-items: center;
   color: var(--accent-color);
   font-size: var(--font-size-text);
+  text-transform: uppercase;
 }
 
 .rec-notice::after {
@@ -165,7 +165,7 @@
 }
 
 .faq__title {
-  color: var(--accent-color);
+  color: var(--contrast-title-color);
   font-weight: 700;
   font-size: var(--font-size-text);
   line-height: 130%;
@@ -335,7 +335,7 @@
     margin-top: 10px;
   }
 
-  .images-grid > div {
+  .images-grid > img {
     grid-column: 1;
     grid-row: auto;
   }
@@ -344,12 +344,12 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .bordered::before {
+  .decorated-zone::before {
     top: 10px;
     right: 10px;
   }
 
-  .bordered::after {
+  .decorated-zone::after {
     bottom: 10px;
     left: 10px;
   }

@@ -4,14 +4,18 @@
   переключая тему
 */
 .page.theme_light {
-  color-scheme: light;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
   --background-color: #ffffff;
-  --header-cover-img: url(../images/cover-image-light.png);
-  --text-color: #353430;
+  --dark-color: #353430;
+  --cover-img: url(../images/cover-image-light.png);
+  --text-color: var(--dark-color);
+  --contrast-title-color: var(--decor-text-color);
+  --border-color: var(--dark-color);
+  --border-hover-color: rgba(50, 49, 45, 0.4);
+  --decor-text-color: var(--dark-color);
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
 }
@@ -20,84 +24,21 @@
   display: none;
 }
 
-.page.theme_light .header__theme-menu-button {
-  color: var(--text-color);
-}
-
-.page.theme_light .faq__title {
-  color: var(--text-color);
-}
-
-.page.theme_light .title-decor {
-  color: var(--text-color);
-}
-
-.page.theme_light .header__theme-menu-button:hover {
-  border: 1px solid rgba(50, 49, 45, 0.4);
-}
-
-.page.theme_light .header__theme-menu-button_active {
-  border: 1px solid var(--text-color);
-}
-
-.page.theme_light .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--text-color);
-}
-
-.page.theme_light .bordered::before {
-  border-right: 1px solid var(--text-color);
-  border-top: 1px solid var(--text-color);
-}
-
-.page.theme_light .bordered::after {
-  border-left: 1px solid var(--text-color);
-  border-bottom: 1px solid var(--text-color);
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: #ffffff;
-    --header-cover-img: url(../images/cover-image-light.png);
-    --text-color: #353430;
+    --dark-color: #353430;
+    --cover-img: url(../images/cover-image-light.png);
+    --text-color: var(--dark-color);
+    --contrast-title-color: var(--decor-text-color);
+    --border-color: var(--dark-color);
+    --border-hover-color: rgba(50, 49, 45, 0.4);
+    --decor-text-color: var(--dark-color);
     --accent-color: #ff8dcb;
     --title-color: #ffc2e6;
   }
 
-  .header__theme-menu-button {
-    color: var(--text-color);
-  }
-
   .rec-notice {
     display: none;
-  }
-
-  .faq__title {
-    color: var(--text-color);
-  }
-
-  .title-decor {
-    color: var(--text-color);
-  }
-
-  .header__theme-menu-button:hover {
-    border: 1px solid rgba(50, 49, 45, 0.4);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--text-color);
-  }
-
-  .header__theme-menu-button_active {
-    border: 1px solid var(--text-color);
-  }
-
-  .bordered::before {
-    border-right: 1px solid var(--text-color);
-    border-top: 1px solid var(--text-color);
-  }
-
-  .bordered::after {
-    border-left: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
   }
 }

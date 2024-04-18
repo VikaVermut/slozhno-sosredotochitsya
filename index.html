@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <link rel="icon" href="/images/favicon.svg" />
+    <link rel="icon" href="./images/favicon.svg" />
     <meta name="color-scheme" content="dark light" />
   </head>
   <body class="page">
-    <header class="header decorated-zone bordered">
-      <div class="rec-notice">REC</div>
+    <header class="header decorated-zone">
+      <div class="rec-notice" aria-hidden="true">rec</div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -60,7 +60,7 @@
               её просто не существует. Исследователи
               <a
                 class="link-decor"
-                href="0#"
+                href="https://dana.org/article/multicosts-of-multitasking/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >выяснили</a
@@ -132,7 +132,7 @@
               5 простых (на самом деле не очень) советов
             </h3>
             <h4
-              class="title-decor faq-answer__title title-decor faq-answer__title_regular"
+              class="title-decor faq-answer__title faq-answer__title_regular"
             >
               Представьте небо и облака
             </h4>
@@ -149,7 +149,7 @@
           </div>
           <div class="faq-answer">
             <h4
-              class="title-decor faq-answer__title title-decor faq-answer__title_regular"
+              class="title-decor faq-answer__title faq-answer__title_regular"
             >
               Включите музыку
             </h4>
@@ -162,7 +162,7 @@
           </div>
           <div class="faq-answer">
             <h4
-              class="title-decor faq-answer__title title-decor faq-answer__title_regular"
+              class="title-decor faq-answer__title faq-answer__title_regular"
             >
               Прогуляйтесь
             </h4>
@@ -170,7 +170,7 @@
               Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
               <a
                 class="link-decor"
-                href="0#"
+                href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -184,7 +184,7 @@
           </div>
           <div class="faq-answer">
             <h4
-              class="title-decor faq-answer__title title-decor faq-answer__title_regular"
+              class="title-decor faq-answer__title faq-answer__title_regular"
             >
               Хорошо ешьте
             </h4>
@@ -197,7 +197,7 @@
           </div>
           <div class="faq-answer">
             <h4
-              class="title-decor faq-answer__title title-decor faq-answer__title_regular"
+              class="title-decor faq-answer__title faq-answer__title_regular"
             >
               Читайте
             </h4>
@@ -213,45 +213,40 @@
       <section class="images">
         <h2 class="title-decor">А можно в картинках?</h2>
         <div class="images-grid">
-          <div class="images-grid__sunset">
-            <img src="images/sunset.png" loading="lazy" alt="розовый закат" />
-          </div>
-          <div class="images-grid__ice-cream">
+            <img
+              class="images-grid__sunset"
+              src="images/sunset.png"
+              loading="lazy"
+              alt="розовый закат"
+            />
             <img
               class="images-grid__ice-cream"
               src="images/ice-cream.png"
               loading="lazy"
               alt="мороженое в желтой тарелке"
             />
-          </div>
-          <div class="images-grid__tape">
             <img
               class="images-grid__tape"
               src="images/tape.png"
               loading="lazy"
               alt="касета"
             />
-          </div>
-          <div class="images-grid__books">
             <img
               class="images-grid__books"
               src="images/books.png"
               loading="lazy"
               alt="книги"
             />
-          </div>
-          <div class="images-grid__street">
             <img
               class="images-grid__street"
               src="images/street.png"
               loading="lazy"
               alt="улица"
             />
-          </div>
         </div>
       </section>
     </main>
-    <footer class="footer bordered">
+    <footer class="footer decorated-zone">
       <h2 class="footer__title">focus</h2>
     </footer>
     <script src="./scripts/script.js"></script>
